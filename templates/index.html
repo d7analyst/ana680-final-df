@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Titanic Survival</title>
+</head>
+<body>
+<h1>Titanic Survival</h1>
+    <form action="{{ url_for('predict')}}" method="POST">
+
+        <label for="A">Age:</label><br>
+        <input type="number" id = "A" name="Age" required><br><br>
+
+        <label for="S">Sex M/F:</label><br>
+        <input type="text" id = "S" name="Sex" ><br><br>
+
+        <label for="WS">Traveling with Spouse Y/N:</label><br>
+        <input type="text" id="WS" name="Spouse" ><br><br>
+
+        <label for="F">Number of other family members:</label><br>
+        <input type="number" id = "F" name="Family" required><br><br>
+	
+	<h4> C = Cherbourg </h3>
+	<h4>Q = Queenstown </h4>
+	<h4>S = Southampton</h4>
+        <label for="P">Port C Q S:</label><br>
+        <input type="Text" id ="P" name="Port" ><br><br>
+	
+   
+        <input type=submit    value=Submit><br><br>
+
+   </form>
+   <h3> Predicted Survival: {{ predict }} </h3>
+    
+
+</body>
+</html>
